@@ -57,5 +57,5 @@ while True:
       google84 = requests.post('http://aropool.com/mine.php?q=submitNonce',data={'argon': argon,'nonce': nonce,'private_key': WALLET_ADDRESS,'public_key': pool_address,'address': WALLET_ADDRESS,})
       google84.raise_for_status()
       print("submit_share:\n", google84.json())
-    except:
-      google84 = 1
+  except:
+    google84 = 1
