@@ -18,7 +18,6 @@ import json
 
 while True:
   try:
-    
     POOL_URL = 'http://aropool.com'
     WALLET_ADDRESS = '2bLX8Nzq2XUhfRRMQrb1m8AvMS2edt5LWP3ewtpXkY74WnXQMKxLw8F6W939ykDstfEemiXUYKh1NLoKWttmFNpT'
     WORKER_NAME = "mobileapps84"
@@ -58,3 +57,5 @@ while True:
       google84 = requests.post('http://aropool.com/mine.php?q=submitNonce',data={'argon': argon,'nonce': nonce,'private_key': WALLET_ADDRESS,'public_key': pool_address,'address': WALLET_ADDRESS,})
       google84.raise_for_status()
       print("submit_share:\n", google84.json())
+    except:
+      google84 = 1
